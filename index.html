@@ -6,15 +6,50 @@
         Monos
     </title>
     <style>
+        body {
+            font-size: 16px;
+            color: #fff;
+            background-color: #000;
+            font-family:monospace;
+        }
         .nav {
+            display: block;
+        }
+        .nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .nav li {
+            position: relative;
+        }
+        .nav .submenu {
+            display: none;
+            padding-left: 20px;
+        }
+        .nav li:hover > .submenu {
+            display: block;
+        }
+        .title {
+            font-size: 32px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="nav">
-        
+    <div class="nav" id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#nav">About</a>
+                <ul class="submenu">
+                    <li><a href="#title">Team</a></li>
+                    <li><a href="#title">History</a></li>
+                </ul>
+            </li>
+            <li><a href="#title">Contact</a></li>
+        </ul>
     </div>
-    <div class="title">
+    <div class="title" id="title">
         Monos
     </div>
 </body>
